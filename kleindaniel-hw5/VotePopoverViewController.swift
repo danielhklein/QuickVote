@@ -20,6 +20,7 @@ class VotePopoverViewController: UIViewController, UIPopoverPresentationControll
         super.didReceiveMemoryWarning()
     }
     
+    //create and run table view to be presented within the popover controller
     func presentPopover(sourceController sourceController:UIViewController, sourceView:UIView, sourceRect:CGRect) {
         self.voteController = VoteTableViewController(title: "Vote", preferredContentSize: CGSize(width: 300 , height: 200))
         self.voteController?.view

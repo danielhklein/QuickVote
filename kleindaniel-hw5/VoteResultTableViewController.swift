@@ -24,6 +24,7 @@ class VoteResultTableViewController: UIViewController, UITableViewDataSource, UI
         self.view.addSubview(self.tableView)
     }
     
+    //retrieve CoreData information
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -66,18 +67,20 @@ class VoteResultTableViewController: UIViewController, UITableViewDataSource, UI
     }
 
 
+    //number of rows in table equals the number of entries in CoreData
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.votingData.count
     }
     
+    //retrieve data for each candidate, display their full name and the number of votes for the candidate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.cellId, forIndexPath: indexPath)
         let index: Int = indexPath.row
         let candidate = votingData[index]
         let first = candidate.valueForKey("firstName") as! String
         let last = candidate.valueForKey("lastName") as! String
-        let votes = candidate.valueForKey("count") as! String
-        cell.textLabel?.text = "\(first)  \(last) Votes: \(votes)"
+        let votes = candidate.valueForKey("count") as! Int
+        cell.textLabel?.text = "\(first) \(last)   Votes: \(votes)"
         return cell
     }
 }

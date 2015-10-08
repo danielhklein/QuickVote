@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BE4CA71BC2E24A005CE12A /* DataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE4CA61BC2E24A005CE12A /* DataModelProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		65FB07F51BBDE679008CCF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB07F41BBDE679008CCF30 /* AppDelegate.swift */; };
-		65FB07F71BBDE679008CCF30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB07F61BBDE679008CCF30 /* ViewController.swift */; };
 		65FB07FA1BBDE679008CCF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB07F81BBDE679008CCF30 /* Main.storyboard */; };
 		65FB07FD1BBDE679008CCF30 /* kleindaniel_hw5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65FB07FB1BBDE679008CCF30 /* kleindaniel_hw5.xcdatamodeld */; };
 		65FB07FF1BBDE67A008CCF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FB07FE1BBDE67A008CCF30 /* Assets.xcassets */; };
 		65FB08021BBDE67A008CCF30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB08001BBDE67A008CCF30 /* LaunchScreen.storyboard */; };
+		65FB08111BBDF351008CCF30 /* VotePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB08091BBDF351008CCF30 /* VotePopoverViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08121BBDF351008CCF30 /* VoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB080A1BBDF351008CCF30 /* VoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08131BBDF351008CCF30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB080B1BBDF351008CCF30 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08141BBDF351008CCF30 /* VoteResultPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB080C1BBDF351008CCF30 /* VoteResultPopoverViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08151BBDF351008CCF30 /* VoteResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB080D1BBDF351008CCF30 /* VoteResultTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08161BBDF351008CCF30 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB080E1BBDF351008CCF30 /* AddViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08171BBDF351008CCF30 /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB080F1BBDF351008CCF30 /* ShowTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65FB08181BBDF351008CCF30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB08101BBDF351008CCF30 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65BE4CA61BC2E24A005CE12A /* DataModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelProtocol.swift; sourceTree = "<group>"; };
 		65FB07F11BBDE679008CCF30 /* kleindaniel-hw5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kleindaniel-hw5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB07F41BBDE679008CCF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65FB07F61BBDE679008CCF30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65FB07F91BBDE679008CCF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65FB07FC1BBDE679008CCF30 /* kleindaniel_hw5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kleindaniel_hw5.xcdatamodel; sourceTree = "<group>"; };
 		65FB07FE1BBDE67A008CCF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FB08011BBDE67A008CCF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65FB08031BBDE67A008CCF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65FB08091BBDF351008CCF30 /* VotePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VotePopoverViewController.swift; sourceTree = "<group>"; };
+		65FB080A1BBDF351008CCF30 /* VoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteTableViewController.swift; sourceTree = "<group>"; };
+		65FB080B1BBDF351008CCF30 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65FB080C1BBDF351008CCF30 /* VoteResultPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteResultPopoverViewController.swift; sourceTree = "<group>"; };
+		65FB080D1BBDF351008CCF30 /* VoteResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteResultTableViewController.swift; sourceTree = "<group>"; };
+		65FB080E1BBDF351008CCF30 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		65FB080F1BBDF351008CCF30 /* ShowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
+		65FB08101BBDF351008CCF30 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +72,19 @@
 		65FB07F31BBDE679008CCF30 /* kleindaniel-hw5 */ = {
 			isa = PBXGroup;
 			children = (
+				65FB080E1BBDF351008CCF30 /* AddViewController.swift */,
 				65FB07F41BBDE679008CCF30 /* AppDelegate.swift */,
-				65FB07F61BBDE679008CCF30 /* ViewController.swift */,
+				65BE4CA61BC2E24A005CE12A /* DataModelProtocol.swift */,
+				65FB08101BBDF351008CCF30 /* DetailViewController.swift */,
+				65FB080F1BBDF351008CCF30 /* ShowTableViewController.swift */,
+				65FB080B1BBDF351008CCF30 /* ViewController.swift */,
+				65FB08091BBDF351008CCF30 /* VotePopoverViewController.swift */,
+				65FB080C1BBDF351008CCF30 /* VoteResultPopoverViewController.swift */,
+				65FB080D1BBDF351008CCF30 /* VoteResultTableViewController.swift */,
+				65FB080A1BBDF351008CCF30 /* VoteTableViewController.swift */,
+				65FB08001BBDE67A008CCF30 /* LaunchScreen.storyboard */,
 				65FB07F81BBDE679008CCF30 /* Main.storyboard */,
 				65FB07FE1BBDE67A008CCF30 /* Assets.xcassets */,
-				65FB08001BBDE67A008CCF30 /* LaunchScreen.storyboard */,
 				65FB08031BBDE67A008CCF30 /* Info.plist */,
 				65FB07FB1BBDE679008CCF30 /* kleindaniel_hw5.xcdatamodeld */,
 			);
@@ -137,9 +161,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65FB07F71BBDE679008CCF30 /* ViewController.swift in Sources */,
+				65FB08131BBDF351008CCF30 /* ViewController.swift in Sources */,
+				65FB08111BBDF351008CCF30 /* VotePopoverViewController.swift in Sources */,
+				65FB08161BBDF351008CCF30 /* AddViewController.swift in Sources */,
+				65FB08171BBDF351008CCF30 /* ShowTableViewController.swift in Sources */,
+				65FB08151BBDF351008CCF30 /* VoteResultTableViewController.swift in Sources */,
+				65FB08121BBDF351008CCF30 /* VoteTableViewController.swift in Sources */,
 				65FB07F51BBDE679008CCF30 /* AppDelegate.swift in Sources */,
+				65FB08181BBDF351008CCF30 /* DetailViewController.swift in Sources */,
+				65BE4CA71BC2E24A005CE12A /* DataModelProtocol.swift in Sources */,
 				65FB07FD1BBDE679008CCF30 /* kleindaniel_hw5.xcdatamodeld in Sources */,
+				65FB08141BBDF351008CCF30 /* VoteResultPopoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +287,7 @@
 				INFOPLIST_FILE = "kleindaniel-hw5/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dklein.kleindaniel-hw5";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "kleindaniel-hw5";
 			};
 			name = Debug;
 		};
@@ -266,7 +298,7 @@
 				INFOPLIST_FILE = "kleindaniel-hw5/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dklein.kleindaniel-hw5";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "kleindaniel-hw5";
 			};
 			name = Release;
 		};
@@ -289,6 +321,7 @@
 				65FB08081BBDE67A008CCF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

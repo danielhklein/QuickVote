@@ -14,7 +14,7 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
     let cellId: String = "voteCell"
     var tableView: UITableView = UITableView()
     var votingData = [NSManagedObject]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.frame = CGRectMake(0, 0, self.preferredContentSize.width, self.preferredContentSize.height);
@@ -24,6 +24,7 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.view.addSubview(self.tableView)
     }
     
+    //retrieve CoreData information
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -65,10 +66,12 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         return 1
     }
     
+    //number of rows in table equals the number of entries in CoreData
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.votingData.count
     }
     
+    //retrieve data for each candidate, display their full name
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.cellId, forIndexPath: indexPath)
         let index:Int = indexPath.row
@@ -79,12 +82,26 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    //when row is pressed, increment the number of votes for the candidate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //set up CoreData for save
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
         let index:Int = indexPath.row
         let candidate = votingData[index]
         var count = candidate.valueForKey("count") as! Int
         count++
         candidate.setValue(count, forKey: "count")
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        // Commit the changes
+        do {
+            try managedContext.save()
+        } catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
     }
 }

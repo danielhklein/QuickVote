@@ -19,15 +19,10 @@ class ShowTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
         let managedContext = appDelegate.managedObjectContext
-        
         let fetchRequest = NSFetchRequest(entityName:"Candidate")
-        
         var fetchedResults:[NSManagedObject]? = nil
-        
         do {
             try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
         } catch {
@@ -35,7 +30,6 @@ class ShowTableViewController: UITableViewController {
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
-        
         if let results = fetchedResults {
             votingData = results
         } else {
@@ -51,10 +45,12 @@ class ShowTableViewController: UITableViewController {
         return 1
     }
 
+    //number of rows in table equals the number of entries in CoreData
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return votingData.count
     }
 
+    //retrieve data for each candidate, display their full name
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellid", forIndexPath: indexPath)
         let index: Int = indexPath.row
@@ -67,6 +63,7 @@ class ShowTableViewController: UITableViewController {
         return cell
     }
 
+    //send index of selected candidate to detail view controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "detailSegue") {
             if let indexPath = tableView.indexPathForSelectedRow {

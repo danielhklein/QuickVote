@@ -27,14 +27,24 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let candidate = votingData[row]
-        firstNameOutlet.text = candidate.valueForKey("firstName") as? String
-        lastNameOutlet.text = candidate.valueForKey("lastName") as? String
-        stateOutlet.text = candidate.valueForKey("state") as? String
-        partyOutlet.text = candidate.valueForKey("party") as? String
-        let votes = candidate.valueForKey("count") as! Int
-        votesOutlet.text = "\(votes)"
+        if (row >= 0) {
+            firstNameOutlet.text = candidate.valueForKey("firstName") as? String
+            lastNameOutlet.text = candidate.valueForKey("lastName") as? String
+            stateOutlet.text = candidate.valueForKey("state") as? String
+            partyOutlet.text = candidate.valueForKey("party") as? String
+            let votes = candidate.valueForKey("count") as! Int
+            votesOutlet.text = "\(votes)"
+        } else {
+            //popup error if invalid row
+            let alertController:UIAlertController = UIAlertController(title: "Indexing Error", message: "An error has occurred.", preferredStyle: .ActionSheet)
+            let cancelAction: UIAlertAction = UIAlertAction(title: "OK", style: .Cancel) { action -> Void in
+            }
+            alertController.addAction(cancelAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
+    //import CoreData info
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
